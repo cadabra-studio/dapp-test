@@ -5,17 +5,15 @@ import Message from "./Message";
 
 const Messages = ({messages}) => {
   return (
-    <>
-      <Col>
-        <ListGroup>
-          { 
-            messages.map((message, index) => 
-              <Message key={index} message={message} />
-            )
-          }
-        </ListGroup>
-      </Col>
-    </>
+    <Col>
+      <ListGroup>
+        { 
+          messages.map((message, index) => 
+            <Message key={index} message={message} />
+          )
+        }
+      </ListGroup>
+    </Col>
   );
 }
 

@@ -3,11 +3,10 @@ import { Button, Col, Form, FormGroup, Input } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 class MessageForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { message: "", disabled: true };
-  }
+  state = {
+    message: "",
+    disabled: true
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -22,21 +21,19 @@ class MessageForm extends Component {
     this.setState({ message: "" });
   }
 
-  render() {
+  render = () => {
     return (
-      <>
-        <Col>
-          <Form>
-            <FormGroup>
-              <Input type="text" placeholder="Drop a message for blockchain :)" value={this.state.message} onChange={this.handleChange} />
-            </FormGroup>
+      <Col>
+        <Form>
+          <FormGroup>
+            <Input type="text" placeholder="Drop a message for blockchain :)" value={this.state.message} onChange={this.handleChange} />
+          </FormGroup>
 
-            <Button disabled = {this.state.disabled} color="primary" onClick={this.handleSubmit}>
-              Send message
-            </Button>
-          </Form>
-        </Col>
-      </>
+          <Button disabled = {this.state.disabled} color="primary" onClick={this.handleSubmit}>
+            Send message
+          </Button>
+        </Form>
+      </Col>
     );
   }
 }
