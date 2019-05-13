@@ -3,11 +3,10 @@ import { Button, Col, Form, FormGroup, Input } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 class MessageForm extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { message: "", disabled: true };
-  }
+  state = {
+    message: "",
+    disabled: true
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -22,7 +21,7 @@ class MessageForm extends Component {
     this.setState({ message: "" });
   }
 
-  render() {
+  render = () => {
     return (
       <Col>
         <Form>
