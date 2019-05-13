@@ -41,7 +41,7 @@ class App extends Component {
     }
   };
 
-  runExample = async (e, message) => {
+  handleSubmit = async (e, message) => {
     e.preventDefault();
 
     const { accounts, contract } = this.state;
@@ -53,7 +53,7 @@ class App extends Component {
     this.setState({ messages });
   };
 
-  render() {
+  render = () => {
     if (!this.state.web3) {
       return <Spinner type="grow" color="primary" />
     } 
@@ -61,7 +61,7 @@ class App extends Component {
     return (
       <Container className="mt-5">
         <Row>
-          <MessageForm onSubmit={this.runExample} />
+          <MessageForm onSubmit={this.handleSubmit} />
           <Messages messages={this.state.messages} />
         </Row>
       </Container>
