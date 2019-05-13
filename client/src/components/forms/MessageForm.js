@@ -24,19 +24,17 @@ class MessageForm extends Component {
 
   render() {
     return (
-      <>
-        <Col>
-          <Form>
-            <FormGroup>
-              <Input type="text" placeholder="Drop a message for blockchain :)" value={this.state.message} onChange={this.handleChange} />
-            </FormGroup>
+      <Col>
+        <Form>
+          <FormGroup>
+            <Input type="text" placeholder="Drop a message for blockchain :)" value={this.state.message} onChange={this.handleChange} />
+          </FormGroup>
 
-            <Button disabled = {this.state.disabled} color="primary" onClick={this.handleSubmit}>
-              Send message
-            </Button>
-          </Form>
-        </Col>
-      </>
+          <Button disabled = {this.state.disabled} color="primary" onClick={this.handleSubmit}>
+            Send message
+          </Button>
+        </Form>
+      </Col>
     );
   }
 }

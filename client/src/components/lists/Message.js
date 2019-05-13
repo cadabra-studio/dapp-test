@@ -4,11 +4,9 @@ import { ListGroupItem } from 'reactstrap';
 
 const Message = ({message}) => {
   return (
-    <>
-      <ListGroupItem>
-        { message }
-      </ListGroupItem>
-    </>
+    <ListGroupItem>
+      { message }
+    </ListGroupItem>
   );
 }
 

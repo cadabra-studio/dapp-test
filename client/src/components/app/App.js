@@ -59,14 +59,12 @@ class App extends Component {
     } 
 
     return (
-      <>
-        <Container className="mt-5">
-          <Row>
-            <MessageForm onSubmit={this.runExample} />
-            <Messages messages={this.state.messages} />
-          </Row>
-        </Container>
-      </>
+      <Container className="mt-5">
+        <Row>
+          <MessageForm onSubmit={this.runExample} />
+          <Messages messages={this.state.messages} />
+        </Row>
+      </Container>
     );
   }
 }
